@@ -72,3 +72,16 @@ $d_2 = d1 - (\sigma*\sqrt{T})$
 Put Call Parity
 
 P + S = C + X*$e^(-R_f^c * T)$
+
+## Dividends, Warrants and Implied Volatility
+
+Relaxing the assumptions of BSM to account for dividends. Cash flows will increase put values and decrease call values.
+Instead of using S, discount the S using the dividend yield, so $S_0*e^{-q*T}$.
+
+When using BSM for options on futures, the model is called **Black's Model**.
+For options on Futures,
+
+1. $S_0$ in $S_0*e^{-q*T}$ is replaced with futures prices(F)
+2. Dividend yield is replaced with the domestic risk-free rate.
+3. Volatility of the futures price is used in place of the volatility of the stock price under the traditional model.
+4. Black’s model can be used to value an option on an asset’s spot price in terms of its forward price.
