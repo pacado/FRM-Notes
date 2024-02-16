@@ -5,8 +5,8 @@ Examine calculation of call and put options using BSM option pricing model and c
 Objectives:
 
 1. <input type="checkbox" checked /> How to calculate value of call and put option using BSM Model
-2. <input type="checkbox"/> Able to incorporate dividends, currencies, and futures into the model if necessary
-3. <input type="checkbox" /> Apply Put-Call Parity to calculate call and put since BSM model requires the use of European Options
+2. <input type="checkbox" checked/> Able to incorporate dividends, currencies, and futures into the model if necessary
+3. <input type="checkbox" checked/> Apply Put-Call Parity to calculate call and put since BSM model requires the use of European Options
 
 BSM assumes stock prices are log-normally distributed:
 
@@ -65,13 +65,13 @@ $d_2 = d1 - (\sigma*\sqrt{T})$
 | T        | Time to Maturity as % of a 365 day year                    |
 | $S_0$    | asset price                                                |
 | X        | exercise price                                             |
-| R_f^c    | Continuously compounded risk-free rate                     |
+| $R_f^c$  | Continuously compounded risk-free rate                     |
 | $\sigma$ | volatility of continuously compounded returns on the stock |
 | N(.)     | Cumulative normal probability                              |
 
 Put Call Parity
 
-P + S = C + X*$e^(-R_f^c * T)$
+P + S = C + X*$e^{-R_f^c * T}$
 
 ## Dividends, Warrants and Implied Volatility
 
@@ -85,3 +85,14 @@ For options on Futures,
 2. Dividend yield is replaced with the domestic risk-free rate.
 3. Volatility of the futures price is used in place of the volatility of the stock price under the traditional model.
 4. Black’s model can be used to value an option on an asset’s spot price in terms of its forward price.
+
+> Calculating effect of dividends if dividends are specified in Dollar terms. Discount the value of the dividend. And then subtract that present value of dividend from the S value. Then proceed with the application of BSM formula
+
+### American Options
+
+When dividends are paid, no difference between European or American options.
+Unexercised value of a call option = $S_0 - X * e^{-r * T}$
+
+### Warrants (Re-Do)
+
+Bonds with attachments that behave similar to options on equities
