@@ -55,3 +55,24 @@ $d_1 = \frac{ ln({\frac{S_0}{X}}) + (R_f + \frac{\sigma^2}{2})*T }{\sigma*\sqrt{
 > > Delta of a call option equals $e^{-qT} * N(d1)$  
 > > Delta of a put option equals $e^{-qT} * {N(d1) - 1}$  
 > > Delta of a forward contract equals $e^{-q*T}$
+
+> Unlike Forward Contracts, Futures Delta is not 1 because of spot-futures parity relationship.
+>
+> > Delta of a futures position is $e^{rT}$.  
+> > If the stock paid dividend, Delta would be $e^{(r-q)*T}$
+> > An Investor would hedge short futures by going long the amount of deliverable asset
+
+## Dynamic Aspects of Delta Hedging
+
+Delta of an option is dependent on the price of the underlying stock. If the price, Delta Hedging needs to be done again to maintain delta neutral hedge.
+
+Goal of a delta neutral portfolio is to combine a position in an asset with a position in an option so that the value of the portfolio does not change with changes in the value of the asset.
+
+$number\ of\ options\ needed\ to\ delta\ hedge = \frac{number\ of\ shares\ hedged}{delta\ of\ call\ option}$
+
+Dynamic Hedging - if the hedge is adjusted on a frequent basis  
+Static Hedging - if the hedge is setup at the beginning and then left as is - **Hedge and Forget Strategy**.
+
+## Theta, Gamma, Vega and Rho
+
+[Redo]
