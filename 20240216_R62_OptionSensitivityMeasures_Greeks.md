@@ -73,6 +73,16 @@ $number\ of\ options\ needed\ to\ delta\ hedge = \frac{number\ of\ shares\ hedge
 Dynamic Hedging - if the hedge is adjusted on a frequent basis  
 Static Hedging - if the hedge is setup at the beginning and then left as is - **Hedge and Forget Strategy**.
 
+Other portfolio hedging approaches  
+Also possible to delta hedge by buying put options in sufficient numbers so that the current gain or loss on the underlying asset is offset by the current gain or loss on the puts.
+
+For a delta normal porfolio
+
+| Action | Quantity                     | Options to buy/sell as hedge | Position in Shares                    |
+| ------ | ---------------------------- | ---------------------------- | ------------------------------------- |
+| buy    | $\frac{1}{call \delta - 1 }$ | put options                  | to protect a share of stock held long |
+| sell   | $\frac{1}{call \delta  }$    | call options                 | for each share of stock held long     |
+
 ## Theta, Gamma, Vega and Rho
 
 [Redo]
